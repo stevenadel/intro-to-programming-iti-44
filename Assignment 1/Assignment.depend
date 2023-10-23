@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1697901908 source:d:\iti\introduction to programming\assignments\assignment\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1697928857 source:d:\iti\introduction to programming\assignments\main.c
+	<stdio.h>
+
+1697902988 source:d:\iti\introduction to programming\assignments\1.1 result.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,250 @@
+1. cube
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Input a number: ");
+    if (!scanf("%d", &num))
+    {
+        printf("Please input a number.");
+        return 1;
+    }
+
+    printf("Cube of %d is %d", num, num*num*num);
+}
+
+---------------------------------------------------
+
+2. alphabet.c
+
+#include <stdio.h>
+
+int main()
+{
+    char input;
+
+    printf("Input a character: ");
+    scanf("%c", &input);
+
+    if ((input >= 65 && input <= 90) ||
+        (input >= 97 && input <= 122))
+    {
+        printf("Character %c is in the alphabet.\n", input);
+    }
+    else
+    {
+        printf("Not alphabet.\n");
+
+    }
+}
+
+------------------------------------------------------------------
+
+3. positive-negative.c
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input a number: ");
+    if (!scanf("%d", &n))
+    {
+        printf("Please input a number.\n");
+    }
+
+    if (n > 0)
+    {
+        printf("Number is positive.\n");
+    }
+    else if (n < 0)
+    {
+        printf("Number is negative.\n");
+    }
+    else
+    {
+        printf("Number is zero.\n");
+    }
+}
+
+--------------------------------------------------------------
+
+4. calculator
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,y;
+    printf("Input two numbers: ");
+    if (2 != scanf("%d %d", &x, &y))
+    {
+        printf("Please input a two numbers.\n");
+        return 1;
+    }
+
+    char mode;
+    printf("Input operator: ");
+    scanf(" %c", &mode);
+    if (mode != '+' && mode != '-'
+     && mode != '*' && mode != '/')
+    {
+        printf("Please choose operator from: + - * /\n");
+        return 1;
+    }
+    if (0 == y && '/' == mode)
+    {
+        printf("Cannot divide by zero.\n");
+        return 1;
+    }
+
+    switch (mode)
+    {
+        case '+':
+            printf("%d\n", x+y);
+            break;
+        case '-':
+            printf("%d\n", x-y);
+            break;
+        case '*':
+            printf("%d\n", x*y);
+            break;
+        case '/':
+            printf("%d\n", x/y);
+            break;
+    }
+}
+
+---------------------------------------------------------------------
+
+5. evenodd.c
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Input a number: ");
+    if (!scanf("%d", &num))
+    {
+        printf("Please input a number.\n");
+        return 1;
+    }
+
+    if (num % 2 == 0)
+    {
+        printf("Number is even.\n");
+    }
+    else
+    {
+        printf("Number is odd.\n");
+    }
+}
+
+-----------------------------------------------------
+
+6. uppercase.c
+
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("Input a number: ");
+    if (!scanf("%d", &num))
+    {
+        printf("Please input a number.\n");
+        return 1;
+    }
+
+    if (num % 2 == 0)
+    {
+        printf("Number is even.\n");
+    }
+    else
+    {
+        printf("Number is odd.\n");
+    }
+}
+ -----------------------------------------------------
+
+7. multiple.c
+
+#include <stdio.h>
+
+int main()
+{
+    int x,y;
+    printf("Input first number: ");
+    if (!scanf("%d", &x))
+    {
+        printf("Please input a number.\n");
+        return 1;
+    }
+
+    printf("Input second number: ");
+    if (!scanf("%d", &y))
+    {
+        printf("Please input a number.\n");
+        return 1;
+    }
+
+    if (x % y == 0)
+    {
+        printf("%d is a multiple of %d.\n", x, y);
+    }
+    else
+    {
+        printf("%d is not a multiple of %d.\n", x, y);
+    }
+}
+
+----------------------------------------------------------------
+
+8. prime.c
+
+#include <stdio.h
+
+int isPrime(int n);
+
+int main()
+{
+    int x,y;
+    printf("Input first integer: ");
+    if (1 != scanf("%d", &x) || x < 1)
+    {
+        printf("Please input a positive integer.\n");
+        return 1;
+    }
+
+    printf("Input second integer: ");
+    if (1 != scanf("%d", &y) || y < 1 || x > y)
+    {
+        printf("Please input a positive integer bigger than first one.\n");
+        return 1;
+    }
+
+    for (int i = x; i < y; i++)
+    {
+        if (isPrime(i))
+        {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+}
+
+int isPrime(int n){
+
+    for (int i = 2; i * i <= n; i++)
+    {
+
+        if (0 == n % i){
+
+            return 0;
+        }
+    }
+    return 1

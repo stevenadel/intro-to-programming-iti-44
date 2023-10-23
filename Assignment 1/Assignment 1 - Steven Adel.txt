@@ -1,0 +1,581 @@
+1.1 result
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x,y;
+    printf("Input first number: ");
+    int scan = scanf("%d", &x);
+
+    if (!1 == scan)
+    {
+        printf("Please input a number.");
+        return 1;
+    }
+
+    printf("Input second number: ");
+    scan = scanf("%d", &y);
+
+    if (!1 == scan)
+    {
+        printf("Please input a number.");
+        return 1;
+    }
+
+    int sum = x + y;
+    int result = (sum * 3) - 10;
+    printf("Equation result is %d", result);
+}
+
+
+------------------------------------------------------
+
+1.2 name
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("My name is Steven Adel.\n");
+    printf("My grade is A+.\n");
+}
+
+---------------------------------------------------------
+
+1.3 temperature
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    float celsius;
+    printf("Input temperature in celsius: ");
+    int scan = scanf("%f", &celsius);
+
+    if (!1 == scan)
+    {
+        printf("Please input a temperature in celsius.");
+        return 1;
+    }
+
+    float fahrenheit = (celsius * 1.8) + 32;
+    printf("Temperature in fahrenheit is %.2f", fahrenheit);
+}
+
+--------------------------------------------------------------
+
+1.4 radius
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float radius;
+    printf("Input radius: ");
+    int scan = scanf("%f", &radius);
+
+    if (!1 == scan)
+    {
+        printf("Please input a circle radius.\n");
+        return 1;
+    }
+
+    double area = M_PI * (radius * radius);
+    double circumference = 2 * M_PI * radius;
+    printf("Area = %f\n", area);
+    printf("Circumference = %f\n", circumference);
+}
+
+-------------------------------------------------------------
+
+1.5 char
+
+#include <stdio.h>
+
+int main()
+{
+    char character;
+    printf("Input char: ");
+    int scan = scanf("%c", &character);
+
+    printf("ASCII value for %c is %d", character, character);
+}
+
+-----------------------------------------------------------------
+
+1.6 equal
+
+#include <stdio.h>
+
+int main()
+{
+    int x,y;
+    printf("Input first number: ");
+    int scan = scanf("%d", &x);
+    if (!1 == scan)
+    {
+        printf("Please input a number.");
+        return 1;
+    }
+
+    printf("Input second number: ");
+    scan = scanf("%d", &y);
+    if (!1 == scan)
+    {
+        printf("Please input a number.");
+        return 1;
+    }
+
+    if (x > y)
+    {
+        printf("Not equal.\n");
+        printf("%d is bigger.\n", x);
+    }
+    else if (y > x)
+    {
+        printf("Not equal.\n");
+        printf("%d is bigger.\n", y);
+    }
+    else
+    {
+        printf("The two numbers are equal.\n");
+    }
+}
+
+--------------------------------------------------------------
+
+1.7 smallest
+
+#include <stdio.h>
+
+int main()
+{
+    int x,y,z;
+    printf("Input three numbers: ");
+    if (3 != scanf("%d %d %d", &x, &y, &z))
+    {
+        printf("Please input three numbers.\n");
+        return 1;
+    }
+
+    int smallest = x;
+    if (smallest > y)
+    {
+        smallest = y;
+    }
+    if (smallest > z)
+    {
+        smallest = z;
+    }
+
+    printf("Smallest number is %d\n", smallest);
+}
+
+----------------------------------------------------------------
+
+1.8 square
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x;
+    printf("Input a positive integer: ");
+    if (1 != scanf("%d", &x) || x < 1)
+    {
+        printf("Please input a positive integer.\n");
+        return 1;
+    }
+
+    double sqrt_x = sqrt(x);
+    if (sqrt_x * sqrt_x == x)
+    {
+        printf("Number %d is a perfect square\n", x);
+    }
+    else
+    {
+        printf("Number %d is not a perfect square\n", x);
+    }
+}
+
+---------------------------------------------------------------------
+
+1.9 grade
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int grade;
+    printf("Input grade: ");
+    if (1 != scanf("%d", &grade) || grade < 0 || grade > 100)
+    {
+        printf("Please input a valid grade.\n");
+        return 1;
+    }
+
+    if (grade < 50)
+    {
+        printf("Fail\n");
+    }
+    else if (grade < 65)
+    {
+        printf("Pass\n");
+    }
+    else if (grade < 75)
+    {
+        printf("Good\n");
+    }
+    else if (grade < 85)
+    {
+        printf("Very Good\n");
+    }
+    else
+    {
+        printf("Excellent\n");
+    }
+}
+
+-------------------------------------------------------------------------
+
+1.10 calculator
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int x,y;
+    printf("Input two numbers: ");
+    if (2 != scanf("%d %d", &x, &y))
+    {
+        printf("Please input a two numbers.\n");
+        return 1;
+    }
+
+    char mode;
+    printf("Input operator: ");
+    scanf(" %c", &mode);
+    if (mode != '+' && mode != '-'
+     && mode != '*' && mode != '/')
+    {
+        printf("Please choose operator from: + - * /\n");
+        return 1;
+    }
+    if (0 == y && '/' == mode)
+    {
+        printf("Cannot divide by zero.\n");
+        return 1;
+    }
+
+    switch (mode)
+    {
+        case '+':
+            printf("%d\n", x+y);
+            break;
+        case '-':
+            printf("%d\n", x-y);
+            break;
+        case '*':
+            printf("%d\n", x*y);
+            break;
+        case '/':
+            printf("%d\n", x/y);
+            break;
+    }
+}
+
+-------------------------------------------------------------
+
+1.11 sum
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int sum = 0;
+    for (int i = 1; i <= 100; i++)
+    {
+        sum += i;
+    }
+    printf("Sum of first 100 integers is %d", sum);
+}
+
+----------------------------------------------------------------
+
+1.12 factorial
+
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    printf("Input a positive integer: ");
+    if (1 != scanf("%d", &x) || x < 1)
+    {
+        printf("Please input a positive integer.\n");
+        return 1;
+    }
+
+    int factorial = 1;
+    for (int i = 1; i <= x; i++)
+    {
+        factorial *= i;
+    }
+    printf("Factorial of %d is %d\n", x, factorial);
+}
+
+------------------------------------------------------------------
+
+1.13 prime
+
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    printf("Input a positive integer: ");
+    if (1 != scanf("%d", &x) || x < 1)
+    {
+        printf("Please input a positive integer.\n");
+        return 1;
+    }
+
+    if (1 == x || (x % 2 == 0 && x != 2))
+    {
+        printf("Not prime.\n");
+        return 0;
+    }
+
+    for (int i = 2; i <= x/2; i++)
+    {
+        if (x % i == 0)
+        {
+            printf("Not prime.\n");
+            return 0;
+        }
+    }
+
+    printf("Number is prime.\n");
+}
+
+-------------------------------------------------------------------
+
+1.14 alphabet
+
+#include <stdio.h>
+
+int main()
+{
+    for (int i = 65; i <= 90; i++)
+    {
+        printf("%c\n", i);
+    }
+}
+
+--------------------------------------------------------------------
+
+1.15 pow
+
+#include <stdio.h>
+
+int main()
+{
+    int base,exp;
+    printf("Input a number: ");
+    if (!scanf("%d", &base))
+    {
+        printf("Please input a number.");
+        return 1;
+    }
+
+    printf("Input exponent (to power of): ");
+    if (!scanf("%d", &exp) || exp < 0)
+    {
+        printf("Please input a positive exponent.");
+        return 1;
+    }
+
+    int result = 1;
+    for (int i = 1; i <= exp; i++)
+    {
+        result *= base;
+    }
+
+    printf("Result is %d", result);
+}
+
+---------------------------------------------------------------------
+
+1.16 reverse
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input a number: ");
+    if (!scanf("%d", &n) || n < 0)
+    {
+        printf("Please input a positive number.");
+        return 1;
+    }
+
+    int reverse = 0;
+    while (n > 0) {
+        reverse = reverse * 10 + n % 10;
+        n = n / 10;
+    }
+    printf("Reverse is %d\n", reverse);
+}
+
+----------------------------------------------------------------------
+
+1.17 digits
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input a number: ");
+    if (!scanf("%d", &n) || n <= 0)
+    {
+        printf("Please input a positive number.");
+        return 1;
+    }
+
+    int digits = 0;
+    while (n > 0) {
+        n = n / 10;
+        digits++;
+    }
+    printf("Number of digits is %d\n", digits);
+}
+
+------------------------------------------------------------------------
+
+1.18 halfpyramid
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input number of levels: ");
+    if (!scanf("%d", &n) || n <= 0)
+    {
+        printf("Please input a positive number.");
+        return 1;
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+----------------------------------------------------------------------------
+
+1.19 halfreverse
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input number of levels: ");
+    if (!scanf("%d", &n) || n <= 0)
+    {
+        printf("Please input a positive number.");
+        return 1;
+    }
+
+    for (int i = n; i > 0; i--)
+    {
+        for (int j = 0; j < i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+---------------------------------------------------------------------------------
+
+1.20 pyramid
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input number of levels: ");
+    if (!scanf("%d", &n) || n <= 0)
+    {
+        printf("Please input a positive number.");
+        return 1;
+    }
+
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n - i; j++)
+        {
+
+            printf(" ");
+        }
+
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+------------------------------------------------------------------------------------
+
+1.21 star
+
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Input number of levels (default 10): ");
+    if (!scanf("%d", &n) || n <= 0)
+    {
+        printf("Please input a positive number.");
+        return 1;
+    }
+
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= n; j++)
+        {
+            if (i == j)
+            {
+                printf("*");
+            }
+            else if (n - i + 1 == j)
+            {
+                printf("*");
+            }
+            else
+            {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+}
