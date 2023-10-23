@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1697729239 source:d:\iti\introduction to programming\labs\lab 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
+1697729362 source:d:\iti\introduction to programming\labs\lab 3\magic.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+
+1697750801 source:d:\iti\introduction to programming\labs\lab 3\minmax.c
+	<stdio.h>
+
+1697752283 source:d:\iti\introduction to programming\labs\lab 3\printarray.c
+	<stdio.h>
+

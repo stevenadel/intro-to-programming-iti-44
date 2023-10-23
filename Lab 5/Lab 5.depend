@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1698058858 source:d:\iti\introduction to programming\labs\lab 5\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"standard.h"
+	"menu.h"
+	"student.h"
+
+1698060101 d:\iti\introduction to programming\labs\lab 5\menu.h
+
+1698060479 d:\iti\introduction to programming\labs\lab 5\standard.h
+
+1698061571 d:\iti\introduction to programming\labs\lab 5\student.h
+
+1698062745 source:d:\iti\introduction to programming\labs\lab 5\student.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"standard.h"
+
+1698057105 source:d:\iti\introduction to programming\labs\lab 5\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"standard.h"
+	"menu.h"
+	"student.h"
+

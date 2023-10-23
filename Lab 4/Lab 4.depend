@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1697970694 source:d:\iti\introduction to programming\labs\lab 4\1. average.c
+	<stdio.h>
+
+1697971329 source:d:\iti\introduction to programming\labs\lab 4\2. matrix.c
+	<stdio.h>
+
+1697974070 source:d:\iti\introduction to programming\labs\lab 4\3. string.c
+	<stdio.h>
+
+1697974359 source:d:\iti\introduction to programming\labs\lab 4\4. extended.c
+	<stdio.h>
+
+1697975416 source:d:\iti\introduction to programming\labs\lab 4\5. name.c
+	<stdio.h>
+
+1697992353 source:d:\iti\introduction to programming\labs\lab 4\6. menu.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"menu.h"
+
+1698042385 d:\iti\introduction to programming\labs\lab 4\menu.h
+
+1697993502 source:d:\iti\introduction to programming\labs\lab 4\7. frequency.c
+	<stdio.h>
+
+1697994395 source:d:\iti\introduction to programming\labs\lab 4\9. length.c
+	<stdio.h>
+
+1697994946 source:d:\iti\introduction to programming\labs\lab 4\10. alphastr.c
+	<stdio.h>
+
+1697995432 source:d:\iti\introduction to programming\labs\lab 4\11. uppercase.c
+	<stdio.h>
+
+1697992353 source:d:\iti\introduction to programming\labs\lab 4\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<dos.h>
+	<dir.h>
+	"menu.h"
+
