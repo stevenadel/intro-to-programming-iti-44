@@ -1,0 +1,297 @@
+1. average 
+
+#include <stdio.h>
+#define ROW 2
+#define COL 3
+
+int main()
+{
+    int arr[ROW][COL]  = {{2,4,9},{4,5,7}};
+    int sum = 0;
+    int average = 0;
+
+    for (int i = 0; i < COL; i++)
+    {
+        for (int j = 0; j < ROW; j++)
+        {
+            sum += arr[j][i];
+        }
+        average = sum / COL;
+        printf("Average for column %d is %d\n", i+1, average);
+        sum = 0;
+        average = 0;
+    }
+}
+
+-------------------------------------------------------------------
+
+2. matrix
+
+#include <stdio.h>
+#define ROW 3
+#define COL 3
+
+int main()
+{
+    int matrix1[ROW][COL]  = {{2,4,9},{4,5,7},{3,7,5}};
+    int matrix2[ROW][COL]  = {{1,9,6},{8,3,2},{6,4,8}};
+    int result[ROW][COL];
+
+    for (int i = 0; i < ROW; i++)
+    {
+        for (int j = 0; j < COL; j++)
+        {
+            result[i][j] = matrix1[i][j] + matrix2[i][j];
+            printf("%d  ", result[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+----------------------------------------------------------
+
+3. string
+
+#include <stdio.h>
+#define ENTER 13
+
+int main()
+{
+    printf("Enter each character: ");
+    char input = getch();
+
+    char string[100];
+    int counter = 0;
+    while (ENTER != input)
+    {
+        string[counter] = input;
+        counter++;
+        input = getch();
+    }
+
+    string[counter+1] = '\0';
+    printf("\n%s", string);
+}
+
+-------------------------------------------------
+
+4. extended
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Enter firstname: ");
+    char first[50] = "";
+    if (!scanf("%s", first))
+    {
+        printf("Enter a string.\n");
+    }
+
+}
+
+-----------------------------------------------------
+
+5. name
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Enter firstname: ");
+    char first[50] = "";
+    int scan = scanf("%s", first);
+
+    printf("Enter lastname: ");
+    char last[50] = "";
+    scanf("%s", last);
+
+    printf("Fullname: %s %s\n", first, last);
+
+}
+
+-------------------------------------------------------
+
+6. menu
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <dos.h>
+#include <dir.h>
+#include "menu.h"
+
+int main()
+{
+    int position = 0;
+    char cursor;
+    print_menu(0);
+    while (1)
+    {
+        cursor = getch();
+        if (EXTENDED == cursor)
+        {
+            switch (getch())
+            {
+                case UP:
+                    position = next_position(position, UP);
+                    print_menu(position);
+                    break;
+                case DOWN:
+                    position = next_position(position, DOWN);
+                    print_menu(position);
+                    break;
+                case RIGHT:
+                    position = next_position(position, RIGHT);
+                    print_menu(position);
+                    break;
+                case LEFT:
+                    position = next_position(position, LEFT);
+                    print_menu(position);
+                    break;
+             }
+        }
+        else if (ENTER == cursor)
+        {
+            print_submenu(position);
+        }
+    }
+}
+
+------------------------------------------------------------------
+
+7. frequency
+
+#include <stdio.h>
+
+int main()
+{
+    char string[200], chr;
+
+    printf("Input a string: ");
+    scanf("%[^\n]s", string);
+
+    printf("Input character to find frequency: ");
+    scanf(" %c", &chr);
+
+    int i = 0, count = 0;
+    while ('\0' != string[i])
+    {
+        if (chr == string[i])
+        {
+            count++;
+        }
+        i++;
+    }
+
+    printf("Frequency of %c = %d\n", chr, count);
+}
+
+---------------------------------------------------------
+
+8. copy
+
+#include <stdio.h>
+
+int main()
+{
+    char string[150], cpystr[150];
+
+    printf("Input a string: ");
+    scanf("%[^\n]s", string);
+
+    int i = 0;
+    while ('\0' != string[i])
+    {
+        cpystr[i] = string[i];
+        i++;
+    }
+    cpystr[i] = '\0';
+
+    printf("%s\n", cpystr);
+}
+
+--------------------------------------------------
+
+9. length
+
+#include <stdio.h>
+
+int main()
+{
+    char string[150];
+
+    printf("Input a string: ");
+    scanf("%[^\n]s", string);
+
+    int length = 0;
+    while ('\0' != string[length])
+    {
+        length++;
+    }
+    length++; // strlen() considers terminator part of length
+
+    printf("The string is %d characters long (with terminator).\n", length);
+}
+
+--------------------------------------------------------------------------------
+
+10. alphabet-str
+
+#include <stdio.h>
+
+int main()
+{
+    char string[150], newstr[150];
+
+    printf("Input a string: ");
+    scanf("%[^\n]s", string);
+
+    int i = 0, j = 0;
+    char oldchar;
+    while ('\0' != string[i])
+    {
+        oldchar = string[i];
+        if ((oldchar >= 65 && oldchar <= 90) ||
+            (oldchar >= 97 && oldchar <= 122))
+        {
+            newstr[j] = oldchar;
+            j++;
+        }
+        i++;
+    }
+    newstr[j] = '\0';
+
+    printf("%s\n", newstr);
+}
+
+----------------------------------------------------------
+
+11. uppercase
+
+#include <stdio.h>
+
+int main()
+{
+    char string[150], newstr[150];
+
+    printf("Input a string: ");
+    scanf("%[^\n]s", string);
+
+    int i = 0;
+    while ('\0' != string[i])
+    {
+        if (string[i] >= 97 && string[i] <= 122)
+        {
+            newstr[i] = string[i] - 32;
+        }
+        else
+        {
+            newstr[i] = string[i];
+        }
+        i++;
+    }
+    newstr[i] = '\0';
+
+    printf("%s\n", newstr);
+}
